@@ -1,0 +1,6 @@
+
+*.ipch
+*.db
+Bomberman/.vs/Bomberman/v15/.suo
+*.opendb
+Bomberman/Bomberman/Bomberman.vcxproj.user
