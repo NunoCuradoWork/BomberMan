@@ -30,3 +30,14 @@
 *.exe
 *.out
 *.app
+*.ilk
+*.pdb
+
+Debug/
+bin/
+obj/
+*.tlog
+/build/
+*.suo
+*.user
+*.log
