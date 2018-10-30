@@ -29,6 +29,11 @@ Game::Game(const char *title, int xpos, int ypos, int width, int height, bool fu
 	{
 		isRunning = false;
 	}
+
+	SDL_Surface* tempSurface = IMG_Load("assets/bomber.png");
+	playerTexture = SDL_CreateTextureFromSurface(renderer, tempSurface);
+	SDL_FreeSurface(tempSurface);
+	cnt = 0;
 }
 
 Game::~Game()
@@ -56,21 +61,20 @@ void Game::handleEvents()
 
 void Game::update()
 {
+	cnt++;
+	destR.h = 64;
+	destR.w = 64;
+	destR.x = cnt;
 }
 
 void Game::render()
 {
 	SDL_RenderClear(renderer);
+	SDL_RenderCopy(renderer, playerTexture, NULL, &destR);
 	//this is where we would add stuff to render
 	SDL_RenderPresent(renderer);
 }
 
-void Game::clean()
-{
-	SDL_DestroyWindow(window);
-	SDL_DestroyRenderer(renderer);
-	SDL_Quit();
-	std::cout << "Game Cleaned" << std::endl;
-}
+
 
 

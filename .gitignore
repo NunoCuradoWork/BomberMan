@@ -41,3 +41,10 @@ obj/
 *.suo
 *.user
 *.log
+*.ipch
+*.db
+*.json
+*.sqlite
+*.config
+*.opendb
+*.obj
