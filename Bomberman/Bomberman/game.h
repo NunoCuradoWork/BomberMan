@@ -19,12 +19,12 @@ public:
 
 	bool runnable() { return isRunning; };
 
+	static SDL_Renderer *renderer;
+
 private:
 
+	
 	bool isRunning;
 	SDL_Window *window;
-	SDL_Renderer *renderer;
-	SDL_Texture *playerTexture;
-	SDL_Rect srcR, destR;
-	int cnt = 0;
+
 };
